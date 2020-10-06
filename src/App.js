@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 import {Navbar, NavbarBrand} from 'reactstrap'
 import Menu from './components/MenuComponent';
 import { DISHES } from './shared/dishes';
-
+import Main from './components/MainComponent';
 
 function App() {
-  const [dishes ,setdishes ] = useState(DISHES)
+  
    
   return (
+    <BrowserRouter>
     <div className="App">
-    <Menu dishes = {dishes}/>
+    <Main/>
     </div>
+    </BrowserRouter>
   );
 }
 
